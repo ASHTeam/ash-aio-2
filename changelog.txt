@@ -1,4 +1,1 @@
-- Initial release
-
-
-Report bugs at https://github.com/ASHTeam/ash-aio-2/issues
+- Initial release\nReport bugs at https://github.com/ASHTeam/ash-aio-2/issues
