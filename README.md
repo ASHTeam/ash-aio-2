@@ -1,6 +1,12 @@
 # AshAIO 2
 All in one tool containing hacks for Nintendo's Wii U game Splatoon found by the Actual Splatoon Hacking Team.
 
+<p align="center">
+  <img src="http://image.prntscr.com/image/bcff0ba0eacb45f0bab062da3fff340a.png" alt="AshAIO Image"/>
+</p>
+
+[Downloads](https://github.com/ASHTeam/ash-aio-2/releases/latest) | [Wiki](https://github.com/ASHTeam/ash-aio-2/wiki)
+
 ## What is this?
 This is a new version of ASH-AIO made in Python. This version is made using C# and the [TCPGecko.cs](https://github.com/ASHTeam/TCPGecko.cs) library.
 
