@@ -2,7 +2,7 @@
 All in one tool containing hacks for Nintendo's Wii U game Splatoon found by the Actual Splatoon Hacking Team.
 
 <p align="center">
-  <img src="http://image.prntscr.com/image/bcff0ba0eacb45f0bab062da3fff340a.png" alt="AshAIO Image"/>
+  <img src="http://image.prntscr.com/image/cbb503a344f34f55864cfbc23fb32d33.png" alt="AshAIO Image"/>
 </p>
 
 [Downloads](https://github.com/ASHTeam/ash-aio-2/releases/latest) | [Wiki](https://github.com/ASHTeam/ash-aio-2/wiki)
