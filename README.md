@@ -10,7 +10,7 @@ All in one tool containing hacks for Nintendo's Wii U game Splatoon found by the
 **Status**: [![Build Status](https://travis-ci.org/ASHTeam/ash-aio-2.svg?branch=master)](https://travis-ci.org/ASHTeam/ash-aio-2)
 
 ## What is this?
-This is a rewritten version of the old ASH AIO which was made in Python. This is made using C# and the [TCPGecko.cs](https://github.com/ASHTeam/TCPGecko.cs) library.
+This is a rewritten version of the old ASH AIO which was made in Python. This is made using C# and the [GeckoSharp](https://github.com/ASHTeam/GeckoSharp) library.
 
 ## How to get?
 View the [installation guide](https://github.com/ASHTeam/ash-aio-2/wiki/How-to-get-ASH-AIO)
@@ -27,3 +27,12 @@ View the [Hack information guide](https://github.com/ASHTeam/ash-aio-2/wiki/info
 
 ## License
 View the LICENSE file in this repo, or you can view it in AshAIO.
+
+## Contributing
+Pretty simple actually, just:
+
+- Fork this repository to your account
+- Make changes to your fork (preferably inside a new branch on your fork)
+- Once you've made changes, submit a pull request
+- Explain what you've added in your pull request
+- Someone from ASH Team will review and possibly merge your pull request into the main repository or your pull request gets denied.
