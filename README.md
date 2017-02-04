@@ -5,7 +5,9 @@ All in one tool containing hacks for Nintendo's Wii U game Splatoon found by the
   <img src="http://i.imgur.com/qsxA7LT.png" alt="AshAIO Image"/>
 </p>
 
-[Downloads](https://github.com/ASHTeam/ash-aio-2/releases/latest) | [Wiki](https://github.com/ASHTeam/ash-aio-2/wiki) | ![certified good shit by hexexpeck](http://b.repl.ca/v1/certified_good%20shit%20by-hexexpeck-green.png) | ![certified good shit by povlur.](http://b.repl.ca/v1/certified_good_shit_by-povlur.-blue.png)
+[Downloads](https://github.com/ASHTeam/ash-aio-2/releases/latest) | [Wiki](https://github.com/ASHTeam/ash-aio-2/wiki) | [![GitHub issues](https://img.shields.io/github/issues/ASHTeam/ash-aio-2.svg?style=flat-square)](https://github.com/ASHTeam/ash-aio-2/issues) | [![GitHub forks](https://img.shields.io/github/forks/ASHTeam/ash-aio-2.svg?style=flat-square)](https://github.com/ASHTeam/ash-aio-2/network) | [![GitHub stars](https://img.shields.io/github/stars/ASHTeam/ash-aio-2.svg?style=flat-square)](https://github.com/ASHTeam/ash-aio-2/stargazers) | [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/ASHTeam/ash-aio-2/master/LICENSE) | [![Twitter](https://img.shields.io/twitter/url/https/github.com/ASHTeam/ash-aio-2.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D) | [![Current Version](https://img.shields.io/badge/version-2.0.0.1-green.svg)](https://github.com/ASHTeam/ash-aio-2/releases/latest)
+
+![certified good shit by hexexpeck](http://b.repl.ca/v1/certified_good%20shit%20by-hexexpeck-green.png) | ![certified good shit by povlur.](http://b.repl.ca/v1/certified_good_shit_by-povlur.-blue.png)
 
 **Status**: [![Build Status](https://travis-ci.org/ASHTeam/ash-aio-2.svg?branch=master)](https://travis-ci.org/ASHTeam/ash-aio-2)
 
