@@ -8,7 +8,7 @@ namespace NewAshAIO
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.WebBrowser webBrowser1;
+		private System.Windows.Forms.RichTextBox changelogTextBox;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -32,7 +32,7 @@ namespace NewAshAIO
 		private void InitializeComponent()
 		{
 			this.button1 = new System.Windows.Forms.Button();
-			this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+			this.changelogTextBox = new System.Windows.Forms.RichTextBox();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -45,29 +45,29 @@ namespace NewAshAIO
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.Button1Click);
 			// 
-			// webBrowser1
+			// changelogTextBox
 			// 
-			this.webBrowser1.AllowNavigation = false;
-			this.webBrowser1.Location = new System.Drawing.Point(22, 12);
-			this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-			this.webBrowser1.Name = "webBrowser1";
-			this.webBrowser1.Size = new System.Drawing.Size(250, 209);
-			this.webBrowser1.TabIndex = 3;
-			this.webBrowser1.Url = new System.Uri("https://raw.githubusercontent.com/ASHTeam/ash-aio-2/master/changelog.txt", System.UriKind.Absolute);
-			this.webBrowser1.WebBrowserShortcutsEnabled = false;
+			this.changelogTextBox.Location = new System.Drawing.Point(12, 12);
+			this.changelogTextBox.Name = "changelogTextBox";
+			this.changelogTextBox.ReadOnly = true;
+			this.changelogTextBox.Size = new System.Drawing.Size(260, 209);
+			this.changelogTextBox.TabIndex = 2;
+			this.changelogTextBox.Text = "Loading...";
+			this.changelogTextBox.TextChanged += new System.EventHandler(this.ChangelogTextBoxTextChanged);
 			// 
 			// ChangelogForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 261);
-			this.Controls.Add(this.webBrowser1);
+			this.Controls.Add(this.changelogTextBox);
 			this.Controls.Add(this.button1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.MaximizeBox = false;
 			this.Name = "ChangelogForm";
 			this.ShowInTaskbar = false;
 			this.Text = "Changelog - AshAIO";
+			this.Load += new System.EventHandler(this.ChangelogFormLoad);
 			this.ResumeLayout(false);
 
 		}

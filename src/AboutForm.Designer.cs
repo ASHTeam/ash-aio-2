@@ -15,8 +15,6 @@ namespace NewAshAIO
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.RichTextBox richTextBox1;
 		private System.Windows.Forms.Button button1;
@@ -45,8 +43,6 @@ namespace NewAshAIO
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
 			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
 			this.button1 = new System.Windows.Forms.Button();
@@ -62,27 +58,9 @@ namespace NewAshAIO
 			this.label1.Text = "Credits";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(12, 264);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(100, 23);
-			this.label2.TabIndex = 2;
-			this.label2.Text = "AshAIO v2.0";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// label3
-			// 
-			this.label3.Location = new System.Drawing.Point(218, 264);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(138, 29);
-			this.label3.TabIndex = 3;
-			this.label3.Text = "By Hexexpeck + ASH Team";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(112, 269);
+			this.label4.Location = new System.Drawing.Point(39, 272);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(100, 23);
 			this.label4.TabIndex = 4;
@@ -99,9 +77,9 @@ namespace NewAshAIO
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(137, 316);
+			this.button1.Location = new System.Drawing.Point(121, 293);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.Size = new System.Drawing.Size(100, 23);
 			this.button1.TabIndex = 7;
 			this.button1.Text = "Close";
 			this.button1.UseVisualStyleBackColor = true;
@@ -109,7 +87,7 @@ namespace NewAshAIO
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(78, 293);
+			this.label5.Location = new System.Drawing.Point(145, 267);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(194, 23);
 			this.label5.TabIndex = 9;
@@ -120,13 +98,11 @@ namespace NewAshAIO
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(351, 342);
+			this.ClientSize = new System.Drawing.Size(351, 323);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.richTextBox1);
 			this.Controls.Add(this.label4);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

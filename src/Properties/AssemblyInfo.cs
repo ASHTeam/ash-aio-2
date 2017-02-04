@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle ("NewAshAIO")]
-[assembly: AssemblyDescription ("All in one tool for using Splatoon hacks found by the ASH Team.")]
+[assembly: AssemblyDescription ("All in one tool containing hacks for Splatoon found by the Actual Splatoon Hacking Team.")]
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("ASH Team")]
 [assembly: AssemblyProduct ("NewAshAIO")]
@@ -24,5 +24,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can use the default the Revision and 
 // Build Numbers by using the '*' as shown below:
-[assembly: AssemblyVersion ("2.0.0.0")]
-[assembly: AssemblyFileVersion ("2.0.0.0")]
+[assembly: AssemblyVersion ("2.0.0.1")]
+[assembly: AssemblyFileVersion ("2.0.0.1")]

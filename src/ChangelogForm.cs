@@ -15,9 +15,19 @@ namespace NewAshAIO
 		{
 			InitializeComponent();
 		}
+		void ChangelogFormLoad(object sender, EventArgs e)
+		{
+		  String changelog = boi.DownloadString("https://raw.githubusercontent.com/ASHTeam/ash-aio-2/master/changelog.txt").Replace("\n", Environment.NewLine);
+          changelogTextBox.Text = changelog;
+		}
 		void Button1Click(object sender, EventArgs e)
 		{
 			this.Close();
+		}
+		void ChangelogTextBoxTextChanged(object sender, EventArgs e)
+		{
+	        String changelog = boi.DownloadString("https://raw.githubusercontent.com/ASHTeam/ash-aio-2/master/changelog.txt").Replace("\n", Environment.NewLine);
+            changelogTextBox.Text = changelog;
 		}
 	}
 }

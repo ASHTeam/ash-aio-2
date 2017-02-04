@@ -29,7 +29,6 @@ namespace NewAshAIO
 		private System.Windows.Forms.Button giantInklingButton;
 		private System.Windows.Forms.Button darkInkButton;
 		private System.Windows.Forms.Button bigInklingButton;
-		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.Button invisibilityTwoButton;
 		private System.Windows.Forms.Button deleteInklingButton;
 		private System.Windows.Forms.Button bombBounceButton;
@@ -58,11 +57,9 @@ namespace NewAshAIO
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem miscellaneousToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem viewSourceCodeToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem viewPovlursSiteToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem viewHexexpecksSiteToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem viewASHTeamSiteToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem reportAnIssueToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem joinASHTeamDiscordToolStripMenuItem;
 		private System.Windows.Forms.HelpProvider helpProvider1;
 		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
@@ -72,8 +69,20 @@ namespace NewAshAIO
 		private System.Windows.Forms.ToolStripMenuItem ashAIOLicenseToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem wikiToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem infoAboutHacksToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem howToInstallAshAIOToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem wikiHomepageToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem viewSourceCodeToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem reportAnIssueToolStripMenuItem1;
+		private System.Windows.Forms.TabControl hackBrowser;
+		private System.Windows.Forms.TabPage safeHacks;
+		private System.Windows.Forms.TabPage dangerousHacks;
+		private System.Windows.Forms.ToolStripMenuItem relatedProjectsToolStripMenuItem;
+		private System.Windows.Forms.NotifyIcon ashAioNotifyIcon;
+		private System.Windows.Forms.StatusStrip statusStrip1;
+		private System.Windows.Forms.ToolStripStatusLabel statusLabel;
+		private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem moddedTCPGeckoClientToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem notepadToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem viewMyPCsIPAddressToolStripMenuItem;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -96,12 +105,12 @@ namespace NewAshAIO
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.label1 = new System.Windows.Forms.Label();
 			this.ipBox = new System.Windows.Forms.TextBox();
 			this.connectBox = new System.Windows.Forms.Button();
 			this.disconnectBox = new System.Windows.Forms.Button();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.fromBeginningButton = new System.Windows.Forms.Button();
 			this.smoothTexButton = new System.Windows.Forms.Button();
@@ -128,7 +137,6 @@ namespace NewAshAIO
 			this.giantInklingButton = new System.Windows.Forms.Button();
 			this.darkInkButton = new System.Windows.Forms.Button();
 			this.bigInklingButton = new System.Windows.Forms.Button();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.invisibilityTwoButton = new System.Windows.Forms.Button();
 			this.deleteInklingButton = new System.Windows.Forms.Button();
@@ -141,46 +149,60 @@ namespace NewAshAIO
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.miscellaneousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.viewSourceCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.viewPovlursSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.viewHexexpecksSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.viewASHTeamSiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.reportAnIssueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.joinASHTeamDiscordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutAshAIOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.viewChangelogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ashAIOLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.viewSourceCodeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.reportAnIssueToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.wikiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.infoAboutHacksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.howToInstallAshAIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.wikiHomepageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.relatedProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.moddedTCPGeckoClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.notepadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.viewMyPCsIPAddressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-			this.groupBox1.SuspendLayout();
-			this.groupBox2.SuspendLayout();
+			this.hackBrowser = new System.Windows.Forms.TabControl();
+			this.safeHacks = new System.Windows.Forms.TabPage();
+			this.dangerousHacks = new System.Windows.Forms.TabPage();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.ashAioNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.menuStrip1.SuspendLayout();
+			this.hackBrowser.SuspendLayout();
+			this.safeHacks.SuspendLayout();
+			this.dangerousHacks.SuspendLayout();
+			this.groupBox1.SuspendLayout();
+			this.statusStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(77, 38);
+			this.label1.Location = new System.Drawing.Point(10, 16);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(100, 23);
+			this.label1.Size = new System.Drawing.Size(120, 23);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Your Wii U IP:";
+			this.label1.Text = "Your Wii U IP address:";
 			// 
 			// ipBox
 			// 
 			this.ipBox.HideSelection = false;
-			this.ipBox.Location = new System.Drawing.Point(157, 35);
+			this.ipBox.Location = new System.Drawing.Point(136, 13);
 			this.ipBox.Name = "ipBox";
-			this.ipBox.Size = new System.Drawing.Size(100, 20);
+			this.ipBox.Size = new System.Drawing.Size(117, 20);
 			this.ipBox.TabIndex = 1;
 			// 
 			// connectBox
 			// 
-			this.connectBox.Location = new System.Drawing.Point(263, 33);
+			this.connectBox.Location = new System.Drawing.Point(259, 11);
 			this.connectBox.Name = "connectBox";
 			this.connectBox.Size = new System.Drawing.Size(75, 23);
 			this.connectBox.TabIndex = 2;
@@ -190,7 +212,7 @@ namespace NewAshAIO
 			// 
 			// disconnectBox
 			// 
-			this.disconnectBox.Location = new System.Drawing.Point(344, 33);
+			this.disconnectBox.Location = new System.Drawing.Point(340, 11);
 			this.disconnectBox.Name = "disconnectBox";
 			this.disconnectBox.Size = new System.Drawing.Size(75, 23);
 			this.disconnectBox.TabIndex = 3;
@@ -198,44 +220,9 @@ namespace NewAshAIO
 			this.disconnectBox.UseVisualStyleBackColor = true;
 			this.disconnectBox.Click += new System.EventHandler(this.DisconnectBoxClick);
 			// 
-			// groupBox1
-			// 
-			this.groupBox1.Controls.Add(this.label2);
-			this.groupBox1.Controls.Add(this.fromBeginningButton);
-			this.groupBox1.Controls.Add(this.smoothTexButton);
-			this.groupBox1.Controls.Add(this.corruptTexButton);
-			this.groupBox1.Controls.Add(this.bounceWalkButton);
-			this.groupBox1.Controls.Add(this.bigInvInklingButton);
-			this.groupBox1.Controls.Add(this.crazyTankButton);
-			this.groupBox1.Controls.Add(this.noHeadButton);
-			this.groupBox1.Controls.Add(this.apelingButton);
-			this.groupBox1.Controls.Add(this.alphaButton);
-			this.groupBox1.Controls.Add(this.tentacleModButton);
-			this.groupBox1.Controls.Add(this.cinemaModeButton);
-			this.groupBox1.Controls.Add(this.glideButton);
-			this.groupBox1.Controls.Add(this.faceplantButton);
-			this.groupBox1.Controls.Add(this.stanceAngleButton);
-			this.groupBox1.Controls.Add(this.whiteBlindInkButton);
-			this.groupBox1.Controls.Add(this.transparentInklingButton);
-			this.groupBox1.Controls.Add(this.smallInklingButton);
-			this.groupBox1.Controls.Add(this.noInklingButton);
-			this.groupBox1.Controls.Add(this.makeEverythingSmallButton);
-			this.groupBox1.Controls.Add(this.makeEverythingBigButton);
-			this.groupBox1.Controls.Add(this.lightInkButton);
-			this.groupBox1.Controls.Add(this.glowingStageButton);
-			this.groupBox1.Controls.Add(this.giantInklingButton);
-			this.groupBox1.Controls.Add(this.darkInkButton);
-			this.groupBox1.Controls.Add(this.bigInklingButton);
-			this.groupBox1.Location = new System.Drawing.Point(12, 64);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(450, 262);
-			this.groupBox1.TabIndex = 4;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Safe Hacks";
-			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(278, 208);
+			this.label2.Location = new System.Drawing.Point(289, 187);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(154, 41);
 			this.label2.TabIndex = 24;
@@ -243,7 +230,7 @@ namespace NewAshAIO
 			// 
 			// fromBeginningButton
 			// 
-			this.fromBeginningButton.Location = new System.Drawing.Point(320, 164);
+			this.fromBeginningButton.Location = new System.Drawing.Point(316, 147);
 			this.fromBeginningButton.Name = "fromBeginningButton";
 			this.fromBeginningButton.Size = new System.Drawing.Size(112, 23);
 			this.fromBeginningButton.TabIndex = 23;
@@ -253,7 +240,7 @@ namespace NewAshAIO
 			// 
 			// smoothTexButton
 			// 
-			this.smoothTexButton.Location = new System.Drawing.Point(222, 164);
+			this.smoothTexButton.Location = new System.Drawing.Point(218, 147);
 			this.smoothTexButton.Name = "smoothTexButton";
 			this.smoothTexButton.Size = new System.Drawing.Size(92, 23);
 			this.smoothTexButton.TabIndex = 22;
@@ -263,7 +250,7 @@ namespace NewAshAIO
 			// 
 			// corruptTexButton
 			// 
-			this.corruptTexButton.Location = new System.Drawing.Point(104, 164);
+			this.corruptTexButton.Location = new System.Drawing.Point(100, 147);
 			this.corruptTexButton.Name = "corruptTexButton";
 			this.corruptTexButton.Size = new System.Drawing.Size(112, 23);
 			this.corruptTexButton.TabIndex = 21;
@@ -273,7 +260,7 @@ namespace NewAshAIO
 			// 
 			// bounceWalkButton
 			// 
-			this.bounceWalkButton.Location = new System.Drawing.Point(6, 193);
+			this.bounceWalkButton.Location = new System.Drawing.Point(6, 174);
 			this.bounceWalkButton.Name = "bounceWalkButton";
 			this.bounceWalkButton.Size = new System.Drawing.Size(92, 23);
 			this.bounceWalkButton.TabIndex = 3;
@@ -283,7 +270,7 @@ namespace NewAshAIO
 			// 
 			// bigInvInklingButton
 			// 
-			this.bigInvInklingButton.Location = new System.Drawing.Point(6, 164);
+			this.bigInvInklingButton.Location = new System.Drawing.Point(6, 147);
 			this.bigInvInklingButton.Name = "bigInvInklingButton";
 			this.bigInvInklingButton.Size = new System.Drawing.Size(92, 23);
 			this.bigInvInklingButton.TabIndex = 20;
@@ -293,7 +280,7 @@ namespace NewAshAIO
 			// 
 			// crazyTankButton
 			// 
-			this.crazyTankButton.Location = new System.Drawing.Point(320, 135);
+			this.crazyTankButton.Location = new System.Drawing.Point(316, 122);
 			this.crazyTankButton.Name = "crazyTankButton";
 			this.crazyTankButton.Size = new System.Drawing.Size(112, 23);
 			this.crazyTankButton.TabIndex = 19;
@@ -303,7 +290,7 @@ namespace NewAshAIO
 			// 
 			// noHeadButton
 			// 
-			this.noHeadButton.Location = new System.Drawing.Point(222, 135);
+			this.noHeadButton.Location = new System.Drawing.Point(218, 122);
 			this.noHeadButton.Name = "noHeadButton";
 			this.noHeadButton.Size = new System.Drawing.Size(92, 23);
 			this.noHeadButton.TabIndex = 18;
@@ -313,7 +300,7 @@ namespace NewAshAIO
 			// 
 			// apelingButton
 			// 
-			this.apelingButton.Location = new System.Drawing.Point(104, 135);
+			this.apelingButton.Location = new System.Drawing.Point(100, 122);
 			this.apelingButton.Name = "apelingButton";
 			this.apelingButton.Size = new System.Drawing.Size(112, 23);
 			this.apelingButton.TabIndex = 17;
@@ -323,7 +310,7 @@ namespace NewAshAIO
 			// 
 			// alphaButton
 			// 
-			this.alphaButton.Location = new System.Drawing.Point(6, 135);
+			this.alphaButton.Location = new System.Drawing.Point(6, 122);
 			this.alphaButton.Name = "alphaButton";
 			this.alphaButton.Size = new System.Drawing.Size(92, 23);
 			this.alphaButton.TabIndex = 16;
@@ -333,7 +320,7 @@ namespace NewAshAIO
 			// 
 			// tentacleModButton
 			// 
-			this.tentacleModButton.Location = new System.Drawing.Point(320, 106);
+			this.tentacleModButton.Location = new System.Drawing.Point(316, 93);
 			this.tentacleModButton.Name = "tentacleModButton";
 			this.tentacleModButton.Size = new System.Drawing.Size(112, 23);
 			this.tentacleModButton.TabIndex = 15;
@@ -343,7 +330,7 @@ namespace NewAshAIO
 			// 
 			// cinemaModeButton
 			// 
-			this.cinemaModeButton.Location = new System.Drawing.Point(222, 105);
+			this.cinemaModeButton.Location = new System.Drawing.Point(218, 92);
 			this.cinemaModeButton.Name = "cinemaModeButton";
 			this.cinemaModeButton.Size = new System.Drawing.Size(92, 24);
 			this.cinemaModeButton.TabIndex = 14;
@@ -353,7 +340,7 @@ namespace NewAshAIO
 			// 
 			// glideButton
 			// 
-			this.glideButton.Location = new System.Drawing.Point(104, 106);
+			this.glideButton.Location = new System.Drawing.Point(100, 93);
 			this.glideButton.Name = "glideButton";
 			this.glideButton.Size = new System.Drawing.Size(112, 23);
 			this.glideButton.TabIndex = 13;
@@ -363,7 +350,7 @@ namespace NewAshAIO
 			// 
 			// faceplantButton
 			// 
-			this.faceplantButton.Location = new System.Drawing.Point(6, 106);
+			this.faceplantButton.Location = new System.Drawing.Point(6, 93);
 			this.faceplantButton.Name = "faceplantButton";
 			this.faceplantButton.Size = new System.Drawing.Size(92, 23);
 			this.faceplantButton.TabIndex = 12;
@@ -373,7 +360,7 @@ namespace NewAshAIO
 			// 
 			// stanceAngleButton
 			// 
-			this.stanceAngleButton.Location = new System.Drawing.Point(320, 77);
+			this.stanceAngleButton.Location = new System.Drawing.Point(316, 64);
 			this.stanceAngleButton.Name = "stanceAngleButton";
 			this.stanceAngleButton.Size = new System.Drawing.Size(112, 23);
 			this.stanceAngleButton.TabIndex = 11;
@@ -383,7 +370,7 @@ namespace NewAshAIO
 			// 
 			// whiteBlindInkButton
 			// 
-			this.whiteBlindInkButton.Location = new System.Drawing.Point(222, 77);
+			this.whiteBlindInkButton.Location = new System.Drawing.Point(218, 64);
 			this.whiteBlindInkButton.Name = "whiteBlindInkButton";
 			this.whiteBlindInkButton.Size = new System.Drawing.Size(92, 23);
 			this.whiteBlindInkButton.TabIndex = 10;
@@ -393,7 +380,7 @@ namespace NewAshAIO
 			// 
 			// transparentInklingButton
 			// 
-			this.transparentInklingButton.Location = new System.Drawing.Point(104, 77);
+			this.transparentInklingButton.Location = new System.Drawing.Point(100, 64);
 			this.transparentInklingButton.Name = "transparentInklingButton";
 			this.transparentInklingButton.Size = new System.Drawing.Size(112, 23);
 			this.transparentInklingButton.TabIndex = 9;
@@ -403,7 +390,7 @@ namespace NewAshAIO
 			// 
 			// smallInklingButton
 			// 
-			this.smallInklingButton.Location = new System.Drawing.Point(6, 77);
+			this.smallInklingButton.Location = new System.Drawing.Point(6, 64);
 			this.smallInklingButton.Name = "smallInklingButton";
 			this.smallInklingButton.Size = new System.Drawing.Size(92, 23);
 			this.smallInklingButton.TabIndex = 8;
@@ -413,7 +400,7 @@ namespace NewAshAIO
 			// 
 			// noInklingButton
 			// 
-			this.noInklingButton.Location = new System.Drawing.Point(320, 48);
+			this.noInklingButton.Location = new System.Drawing.Point(316, 35);
 			this.noInklingButton.Name = "noInklingButton";
 			this.noInklingButton.Size = new System.Drawing.Size(112, 23);
 			this.noInklingButton.TabIndex = 7;
@@ -423,7 +410,7 @@ namespace NewAshAIO
 			// 
 			// makeEverythingSmallButton
 			// 
-			this.makeEverythingSmallButton.Location = new System.Drawing.Point(222, 48);
+			this.makeEverythingSmallButton.Location = new System.Drawing.Point(218, 35);
 			this.makeEverythingSmallButton.Name = "makeEverythingSmallButton";
 			this.makeEverythingSmallButton.Size = new System.Drawing.Size(92, 23);
 			this.makeEverythingSmallButton.TabIndex = 6;
@@ -433,7 +420,7 @@ namespace NewAshAIO
 			// 
 			// makeEverythingBigButton
 			// 
-			this.makeEverythingBigButton.Location = new System.Drawing.Point(104, 48);
+			this.makeEverythingBigButton.Location = new System.Drawing.Point(100, 35);
 			this.makeEverythingBigButton.Name = "makeEverythingBigButton";
 			this.makeEverythingBigButton.Size = new System.Drawing.Size(112, 23);
 			this.makeEverythingBigButton.TabIndex = 5;
@@ -443,7 +430,7 @@ namespace NewAshAIO
 			// 
 			// lightInkButton
 			// 
-			this.lightInkButton.Location = new System.Drawing.Point(6, 48);
+			this.lightInkButton.Location = new System.Drawing.Point(6, 35);
 			this.lightInkButton.Name = "lightInkButton";
 			this.lightInkButton.Size = new System.Drawing.Size(92, 23);
 			this.lightInkButton.TabIndex = 4;
@@ -453,7 +440,7 @@ namespace NewAshAIO
 			// 
 			// glowingStageButton
 			// 
-			this.glowingStageButton.Location = new System.Drawing.Point(320, 19);
+			this.glowingStageButton.Location = new System.Drawing.Point(316, 6);
 			this.glowingStageButton.Name = "glowingStageButton";
 			this.glowingStageButton.Size = new System.Drawing.Size(112, 23);
 			this.glowingStageButton.TabIndex = 3;
@@ -463,7 +450,7 @@ namespace NewAshAIO
 			// 
 			// giantInklingButton
 			// 
-			this.giantInklingButton.Location = new System.Drawing.Point(222, 19);
+			this.giantInklingButton.Location = new System.Drawing.Point(218, 6);
 			this.giantInklingButton.Name = "giantInklingButton";
 			this.giantInklingButton.Size = new System.Drawing.Size(92, 23);
 			this.giantInklingButton.TabIndex = 2;
@@ -473,7 +460,7 @@ namespace NewAshAIO
 			// 
 			// darkInkButton
 			// 
-			this.darkInkButton.Location = new System.Drawing.Point(104, 19);
+			this.darkInkButton.Location = new System.Drawing.Point(100, 6);
 			this.darkInkButton.Name = "darkInkButton";
 			this.darkInkButton.Size = new System.Drawing.Size(112, 23);
 			this.darkInkButton.TabIndex = 1;
@@ -483,7 +470,7 @@ namespace NewAshAIO
 			// 
 			// bigInklingButton
 			// 
-			this.bigInklingButton.Location = new System.Drawing.Point(6, 19);
+			this.bigInklingButton.Location = new System.Drawing.Point(6, 6);
 			this.bigInklingButton.Name = "bigInklingButton";
 			this.bigInklingButton.Size = new System.Drawing.Size(92, 23);
 			this.bigInklingButton.TabIndex = 0;
@@ -491,25 +478,9 @@ namespace NewAshAIO
 			this.bigInklingButton.UseVisualStyleBackColor = true;
 			this.bigInklingButton.Click += new System.EventHandler(this.BigInklingButtonClick);
 			// 
-			// groupBox2
-			// 
-			this.groupBox2.Controls.Add(this.label5);
-			this.groupBox2.Controls.Add(this.invisibilityTwoButton);
-			this.groupBox2.Controls.Add(this.deleteInklingButton);
-			this.groupBox2.Controls.Add(this.bombBounceButton);
-			this.groupBox2.Controls.Add(this.speedButton);
-			this.groupBox2.Controls.Add(this.sustainedJumpButton);
-			this.groupBox2.Controls.Add(this.wipFlyButton);
-			this.groupBox2.Location = new System.Drawing.Point(12, 332);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(450, 122);
-			this.groupBox2.TabIndex = 5;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Dangerous Hacks";
-			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(238, 48);
+			this.label5.Location = new System.Drawing.Point(249, 181);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(194, 47);
 			this.label5.TabIndex = 10;
@@ -518,7 +489,7 @@ namespace NewAshAIO
 			// 
 			// invisibilityTwoButton
 			// 
-			this.invisibilityTwoButton.Location = new System.Drawing.Point(6, 77);
+			this.invisibilityTwoButton.Location = new System.Drawing.Point(10, 35);
 			this.invisibilityTwoButton.Name = "invisibilityTwoButton";
 			this.invisibilityTwoButton.Size = new System.Drawing.Size(84, 23);
 			this.invisibilityTwoButton.TabIndex = 6;
@@ -528,7 +499,7 @@ namespace NewAshAIO
 			// 
 			// deleteInklingButton
 			// 
-			this.deleteInklingButton.Location = new System.Drawing.Point(101, 77);
+			this.deleteInklingButton.Location = new System.Drawing.Point(100, 35);
 			this.deleteInklingButton.Name = "deleteInklingButton";
 			this.deleteInklingButton.Size = new System.Drawing.Size(97, 23);
 			this.deleteInklingButton.TabIndex = 5;
@@ -538,7 +509,7 @@ namespace NewAshAIO
 			// 
 			// bombBounceButton
 			// 
-			this.bombBounceButton.Location = new System.Drawing.Point(101, 48);
+			this.bombBounceButton.Location = new System.Drawing.Point(293, 6);
 			this.bombBounceButton.Name = "bombBounceButton";
 			this.bombBounceButton.Size = new System.Drawing.Size(97, 23);
 			this.bombBounceButton.TabIndex = 4;
@@ -548,7 +519,7 @@ namespace NewAshAIO
 			// 
 			// speedButton
 			// 
-			this.speedButton.Location = new System.Drawing.Point(6, 48);
+			this.speedButton.Location = new System.Drawing.Point(203, 6);
 			this.speedButton.Name = "speedButton";
 			this.speedButton.Size = new System.Drawing.Size(84, 23);
 			this.speedButton.TabIndex = 2;
@@ -558,7 +529,7 @@ namespace NewAshAIO
 			// 
 			// sustainedJumpButton
 			// 
-			this.sustainedJumpButton.Location = new System.Drawing.Point(101, 19);
+			this.sustainedJumpButton.Location = new System.Drawing.Point(100, 6);
 			this.sustainedJumpButton.Name = "sustainedJumpButton";
 			this.sustainedJumpButton.Size = new System.Drawing.Size(97, 23);
 			this.sustainedJumpButton.TabIndex = 1;
@@ -569,7 +540,7 @@ namespace NewAshAIO
 			// 
 			// wipFlyButton
 			// 
-			this.wipFlyButton.Location = new System.Drawing.Point(6, 19);
+			this.wipFlyButton.Location = new System.Drawing.Point(10, 6);
 			this.wipFlyButton.Name = "wipFlyButton";
 			this.wipFlyButton.Size = new System.Drawing.Size(84, 23);
 			this.wipFlyButton.TabIndex = 0;
@@ -579,7 +550,7 @@ namespace NewAshAIO
 			// 
 			// revertButton
 			// 
-			this.revertButton.Location = new System.Drawing.Point(147, 460);
+			this.revertButton.Location = new System.Drawing.Point(147, 340);
 			this.revertButton.Name = "revertButton";
 			this.revertButton.Size = new System.Drawing.Size(179, 26);
 			this.revertButton.TabIndex = 13;
@@ -589,15 +560,16 @@ namespace NewAshAIO
 			// 
 			// menuStrip1
 			// 
-			this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+			this.menuStrip1.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.fileToolStripMenuItem,
 			this.miscellaneousToolStripMenuItem,
 			this.aboutToolStripMenuItem,
-			this.wikiToolStripMenuItem});
+			this.wikiToolStripMenuItem,
+			this.toolsToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(489, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(493, 24);
 			this.menuStrip1.TabIndex = 14;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -613,28 +585,19 @@ namespace NewAshAIO
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
 			this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-			this.exitToolStripMenuItem.Text = "Exit";
+			this.exitToolStripMenuItem.Text = "‎Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
 			// 
 			// miscellaneousToolStripMenuItem
 			// 
 			this.miscellaneousToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.viewSourceCodeToolStripMenuItem,
 			this.viewPovlursSiteToolStripMenuItem,
 			this.viewHexexpecksSiteToolStripMenuItem,
 			this.viewASHTeamSiteToolStripMenuItem,
-			this.reportAnIssueToolStripMenuItem,
 			this.joinASHTeamDiscordToolStripMenuItem});
 			this.miscellaneousToolStripMenuItem.Name = "miscellaneousToolStripMenuItem";
-			this.miscellaneousToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-			this.miscellaneousToolStripMenuItem.Text = "Miscellaneous";
-			// 
-			// viewSourceCodeToolStripMenuItem
-			// 
-			this.viewSourceCodeToolStripMenuItem.Name = "viewSourceCodeToolStripMenuItem";
-			this.viewSourceCodeToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-			this.viewSourceCodeToolStripMenuItem.Text = "View source code";
-			this.viewSourceCodeToolStripMenuItem.Click += new System.EventHandler(this.ViewSourceCodeToolStripMenuItemClick);
+			this.miscellaneousToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+			this.miscellaneousToolStripMenuItem.Text = "Links and sites";
 			// 
 			// viewPovlursSiteToolStripMenuItem
 			// 
@@ -657,13 +620,6 @@ namespace NewAshAIO
 			this.viewASHTeamSiteToolStripMenuItem.Text = "View ASH Team site";
 			this.viewASHTeamSiteToolStripMenuItem.Click += new System.EventHandler(this.ViewASHTeamSiteToolStripMenuItemClick);
 			// 
-			// reportAnIssueToolStripMenuItem
-			// 
-			this.reportAnIssueToolStripMenuItem.Name = "reportAnIssueToolStripMenuItem";
-			this.reportAnIssueToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-			this.reportAnIssueToolStripMenuItem.Text = "Report an issue";
-			this.reportAnIssueToolStripMenuItem.Click += new System.EventHandler(this.ReportAnIssueToolStripMenuItemClick);
-			// 
 			// joinASHTeamDiscordToolStripMenuItem
 			// 
 			this.joinASHTeamDiscordToolStripMenuItem.Name = "joinASHTeamDiscordToolStripMenuItem";
@@ -677,7 +633,9 @@ namespace NewAshAIO
 			this.aboutAshAIOToolStripMenuItem1,
 			this.checkForUpdatesToolStripMenuItem,
 			this.viewChangelogToolStripMenuItem,
-			this.ashAIOLicenseToolStripMenuItem});
+			this.ashAIOLicenseToolStripMenuItem,
+			this.viewSourceCodeToolStripMenuItem1,
+			this.reportAnIssueToolStripMenuItem1});
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
 			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
 			this.aboutToolStripMenuItem.Text = "About";
@@ -710,12 +668,26 @@ namespace NewAshAIO
 			this.ashAIOLicenseToolStripMenuItem.Text = "AshAIO License";
 			this.ashAIOLicenseToolStripMenuItem.Click += new System.EventHandler(this.AshAIOLicenseToolStripMenuItemClick);
 			// 
+			// viewSourceCodeToolStripMenuItem1
+			// 
+			this.viewSourceCodeToolStripMenuItem1.Name = "viewSourceCodeToolStripMenuItem1";
+			this.viewSourceCodeToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
+			this.viewSourceCodeToolStripMenuItem1.Text = "View Source Code";
+			this.viewSourceCodeToolStripMenuItem1.Click += new System.EventHandler(this.ViewSourceCodeToolStripMenuItem1Click);
+			// 
+			// reportAnIssueToolStripMenuItem1
+			// 
+			this.reportAnIssueToolStripMenuItem1.Name = "reportAnIssueToolStripMenuItem1";
+			this.reportAnIssueToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
+			this.reportAnIssueToolStripMenuItem1.Text = "Report an issue";
+			this.reportAnIssueToolStripMenuItem1.Click += new System.EventHandler(this.ReportAnIssueToolStripMenuItem1Click);
+			// 
 			// wikiToolStripMenuItem
 			// 
 			this.wikiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.infoAboutHacksToolStripMenuItem,
-			this.howToInstallAshAIOToolStripMenuItem,
-			this.wikiHomepageToolStripMenuItem});
+			this.wikiHomepageToolStripMenuItem,
+			this.relatedProjectsToolStripMenuItem});
 			this.wikiToolStripMenuItem.Name = "wikiToolStripMenuItem";
 			this.wikiToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
 			this.wikiToolStripMenuItem.Text = "Help";
@@ -723,40 +695,169 @@ namespace NewAshAIO
 			// infoAboutHacksToolStripMenuItem
 			// 
 			this.infoAboutHacksToolStripMenuItem.Name = "infoAboutHacksToolStripMenuItem";
-			this.infoAboutHacksToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+			this.infoAboutHacksToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
 			this.infoAboutHacksToolStripMenuItem.Text = "Info about hacks";
 			this.infoAboutHacksToolStripMenuItem.Click += new System.EventHandler(this.InfoAboutHacksToolStripMenuItemClick);
-			// 
-			// howToInstallAshAIOToolStripMenuItem
-			// 
-			this.howToInstallAshAIOToolStripMenuItem.Name = "howToInstallAshAIOToolStripMenuItem";
-			this.howToInstallAshAIOToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-			this.howToInstallAshAIOToolStripMenuItem.Text = "How to install AshAIO";
-			this.howToInstallAshAIOToolStripMenuItem.Click += new System.EventHandler(this.HowToInstallAshAIOToolStripMenuItemClick);
 			// 
 			// wikiHomepageToolStripMenuItem
 			// 
 			this.wikiHomepageToolStripMenuItem.Name = "wikiHomepageToolStripMenuItem";
-			this.wikiHomepageToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+			this.wikiHomepageToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
 			this.wikiHomepageToolStripMenuItem.Text = "Wiki Homepage";
 			this.wikiHomepageToolStripMenuItem.Click += new System.EventHandler(this.WikiHomepageToolStripMenuItemClick);
+			// 
+			// relatedProjectsToolStripMenuItem
+			// 
+			this.relatedProjectsToolStripMenuItem.Name = "relatedProjectsToolStripMenuItem";
+			this.relatedProjectsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+			this.relatedProjectsToolStripMenuItem.Text = "Related projects";
+			this.relatedProjectsToolStripMenuItem.Click += new System.EventHandler(this.RelatedProjectsToolStripMenuItemClick);
+			// 
+			// toolsToolStripMenuItem
+			// 
+			this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.moddedTCPGeckoClientToolStripMenuItem,
+			this.notepadToolStripMenuItem,
+			this.viewMyPCsIPAddressToolStripMenuItem});
+			this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+			this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+			this.toolsToolStripMenuItem.Text = "&Tools";
+			// 
+			// moddedTCPGeckoClientToolStripMenuItem
+			// 
+			this.moddedTCPGeckoClientToolStripMenuItem.Name = "moddedTCPGeckoClientToolStripMenuItem";
+			this.moddedTCPGeckoClientToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+			this.moddedTCPGeckoClientToolStripMenuItem.Text = "TCPGecko Client";
+			this.moddedTCPGeckoClientToolStripMenuItem.Click += new System.EventHandler(this.ModdedTCPGeckoClientToolStripMenuItemClick);
+			// 
+			// notepadToolStripMenuItem
+			// 
+			this.notepadToolStripMenuItem.Name = "notepadToolStripMenuItem";
+			this.notepadToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+			this.notepadToolStripMenuItem.Text = "Notepad";
+			this.notepadToolStripMenuItem.Click += new System.EventHandler(this.NotepadToolStripMenuItemClick);
+			// 
+			// viewMyPCsIPAddressToolStripMenuItem
+			// 
+			this.viewMyPCsIPAddressToolStripMenuItem.Name = "viewMyPCsIPAddressToolStripMenuItem";
+			this.viewMyPCsIPAddressToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+			this.viewMyPCsIPAddressToolStripMenuItem.Text = "View my PC\'s IP address";
+			this.viewMyPCsIPAddressToolStripMenuItem.Click += new System.EventHandler(this.ViewMyPCsIPAddressToolStripMenuItemClick);
 			// 
 			// helpProvider1
 			// 
 			this.helpProvider1.HelpNamespace = "https://github.com/ASHTeam/ash-aio-2/wiki";
 			// 
+			// hackBrowser
+			// 
+			this.hackBrowser.Controls.Add(this.safeHacks);
+			this.hackBrowser.Controls.Add(this.dangerousHacks);
+			this.hackBrowser.Location = new System.Drawing.Point(12, 77);
+			this.hackBrowser.Name = "hackBrowser";
+			this.hackBrowser.SelectedIndex = 0;
+			this.hackBrowser.Size = new System.Drawing.Size(457, 257);
+			this.hackBrowser.TabIndex = 15;
+			// 
+			// safeHacks
+			// 
+			this.safeHacks.BackColor = System.Drawing.SystemColors.Control;
+			this.safeHacks.Controls.Add(this.label2);
+			this.safeHacks.Controls.Add(this.bigInklingButton);
+			this.safeHacks.Controls.Add(this.bounceWalkButton);
+			this.safeHacks.Controls.Add(this.fromBeginningButton);
+			this.safeHacks.Controls.Add(this.darkInkButton);
+			this.safeHacks.Controls.Add(this.smoothTexButton);
+			this.safeHacks.Controls.Add(this.giantInklingButton);
+			this.safeHacks.Controls.Add(this.corruptTexButton);
+			this.safeHacks.Controls.Add(this.glowingStageButton);
+			this.safeHacks.Controls.Add(this.lightInkButton);
+			this.safeHacks.Controls.Add(this.bigInvInklingButton);
+			this.safeHacks.Controls.Add(this.makeEverythingBigButton);
+			this.safeHacks.Controls.Add(this.crazyTankButton);
+			this.safeHacks.Controls.Add(this.makeEverythingSmallButton);
+			this.safeHacks.Controls.Add(this.noHeadButton);
+			this.safeHacks.Controls.Add(this.noInklingButton);
+			this.safeHacks.Controls.Add(this.apelingButton);
+			this.safeHacks.Controls.Add(this.smallInklingButton);
+			this.safeHacks.Controls.Add(this.alphaButton);
+			this.safeHacks.Controls.Add(this.transparentInklingButton);
+			this.safeHacks.Controls.Add(this.tentacleModButton);
+			this.safeHacks.Controls.Add(this.whiteBlindInkButton);
+			this.safeHacks.Controls.Add(this.cinemaModeButton);
+			this.safeHacks.Controls.Add(this.stanceAngleButton);
+			this.safeHacks.Controls.Add(this.glideButton);
+			this.safeHacks.Controls.Add(this.faceplantButton);
+			this.safeHacks.Location = new System.Drawing.Point(4, 22);
+			this.safeHacks.Name = "safeHacks";
+			this.safeHacks.Padding = new System.Windows.Forms.Padding(3);
+			this.safeHacks.Size = new System.Drawing.Size(449, 231);
+			this.safeHacks.TabIndex = 0;
+			this.safeHacks.Text = "Safe Hacks";
+			// 
+			// dangerousHacks
+			// 
+			this.dangerousHacks.BackColor = System.Drawing.SystemColors.Control;
+			this.dangerousHacks.Controls.Add(this.label5);
+			this.dangerousHacks.Controls.Add(this.wipFlyButton);
+			this.dangerousHacks.Controls.Add(this.deleteInklingButton);
+			this.dangerousHacks.Controls.Add(this.invisibilityTwoButton);
+			this.dangerousHacks.Controls.Add(this.sustainedJumpButton);
+			this.dangerousHacks.Controls.Add(this.speedButton);
+			this.dangerousHacks.Controls.Add(this.bombBounceButton);
+			this.dangerousHacks.Location = new System.Drawing.Point(4, 22);
+			this.dangerousHacks.Name = "dangerousHacks";
+			this.dangerousHacks.Padding = new System.Windows.Forms.Padding(3);
+			this.dangerousHacks.Size = new System.Drawing.Size(449, 231);
+			this.dangerousHacks.TabIndex = 1;
+			this.dangerousHacks.Text = "Dangerous Hacks";
+			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.label1);
+			this.groupBox1.Controls.Add(this.ipBox);
+			this.groupBox1.Controls.Add(this.connectBox);
+			this.groupBox1.Controls.Add(this.disconnectBox);
+			this.groupBox1.Location = new System.Drawing.Point(12, 27);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(457, 44);
+			this.groupBox1.TabIndex = 16;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "TCPGecko Connection";
+			// 
+			// ashAioNotifyIcon
+			// 
+			this.ashAioNotifyIcon.BalloonTipText = "AshAIO is running";
+			this.ashAioNotifyIcon.BalloonTipTitle = "AshAIO";
+			this.ashAioNotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("ashAioNotifyIcon.Icon")));
+			this.ashAioNotifyIcon.Text = "AshAIO";
+			this.ashAioNotifyIcon.Visible = true;
+			this.ashAioNotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AshAioNotifyIconMouseDoubleClick);
+			// 
+			// statusStrip1
+			// 
+			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.statusLabel});
+			this.statusStrip1.Location = new System.Drawing.Point(0, 379);
+			this.statusStrip1.Name = "statusStrip1";
+			this.statusStrip1.Size = new System.Drawing.Size(493, 22);
+			this.statusStrip1.TabIndex = 17;
+			this.statusStrip1.Text = "statusStrip1";
+			// 
+			// statusLabel
+			// 
+			this.statusLabel.Name = "statusLabel";
+			this.statusLabel.Size = new System.Drawing.Size(39, 17);
+			this.statusLabel.Text = "Ready";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(489, 494);
-			this.Controls.Add(this.revertButton);
-			this.Controls.Add(this.groupBox2);
+			this.ClientSize = new System.Drawing.Size(493, 401);
+			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.disconnectBox);
-			this.Controls.Add(this.connectBox);
-			this.Controls.Add(this.ipBox);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.hackBrowser);
+			this.Controls.Add(this.revertButton);
 			this.Controls.Add(this.menuStrip1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.HelpButton = true;
@@ -766,10 +867,15 @@ namespace NewAshAIO
 			this.Name = "MainForm";
 			this.Text = "AshAIO";
 			this.Load += new System.EventHandler(this.MainFormLoad);
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox2.ResumeLayout(false);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
+			this.hackBrowser.ResumeLayout(false);
+			this.safeHacks.ResumeLayout(false);
+			this.dangerousHacks.ResumeLayout(false);
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
+			this.statusStrip1.ResumeLayout(false);
+			this.statusStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
