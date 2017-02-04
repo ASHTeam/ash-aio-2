@@ -38,3 +38,12 @@ Pretty simple actually, just:
 - Once you've made changes, submit a pull request
 - Explain what you've added in your pull request
 - Someone from ASH Team will review and possibly merge your pull request into the main repository or your pull request gets denied.
+
+## Compiling
+- Get Visual Studio 2010 or SharpDevelop
+- Get Git (or GitKraken)
+- Load up Git and type in `git clone https://github.com/ASHTeam/ash-aio-2.git AshAIO`
+- Then load Visual Studio and open the solution
+- Go to the Build tab
+- Click Build NewAshAIO
+- Locate your build in `./bin/Release/` or `/bin/Debug/`
