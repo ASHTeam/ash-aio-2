@@ -48,4 +48,5 @@ Pretty simple actually, just:
 - Then load Visual Studio and open the solution
 - Go to the Build tab
 - Click Build NewAshAIO
-- Locate your build in `./bin/Release/` or `/bin/Debug/`
+- Locate your build in either one of the following folders:
+  `./bin/Release`, `./bin/Debug`, `./obj/Release`, or `./obj/Debug`.
