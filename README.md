@@ -1,6 +1,8 @@
 # AshAIO 2
 All in one tool containing hacks for Nintendo's Wii U game Splatoon found by the Actual Splatoon Hacking Team.
 
+#### [GBATemp Thread](http://gbatemp.net/threads/release-ash-aio-an-all-in-one-splatoon-hacking-tool.461788/)
+
 <p align="center">
   <img src="http://i.imgur.com/qsxA7LT.png" alt="AshAIO v2.0.0.1"/>
 </p>
