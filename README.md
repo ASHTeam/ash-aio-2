@@ -11,6 +11,7 @@ All in one tool containing hacks for Nintendo's Wii U game Splatoon found by the
 
 **Status**: [![Build Status](https://travis-ci.org/ASHTeam/ash-aio-2.svg?branch=master)](https://travis-ci.org/ASHTeam/ash-aio-2)
 
+### Join ASH Team's Discord server!
 [![Join the ASH Team Discord!](https://discordapp.com/api/guilds/255896123229732864/widget.png?style=banner2)](https://discord.gg/Udz3BKf)
 
 ## What is this?
