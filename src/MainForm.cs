@@ -104,32 +104,25 @@ namespace NewAshAIO
 				statusLabel.Text = "Failed to connect, invalid IP entered.";
 				return;
 			}
-			if (Gecko.peek(0x12CDADA0) == 0x000003F2)
-            {
-                diff = 0x0;
-            }
-            else if (Gecko.peek(0x12CE2DA0) == 0x000003F2)
-            {
-                diff = 0x8000;
-            }
-            else if (Gecko.peek(0x12CE3DA0) == 0x000003F2)
-            {
-                diff = 0x9000;
-            }
-            else
-            {
-                MessageBox.Show("Failed to find diff.");
-                statusLabel.Text = "Failed to find diff.";
+			//offset difference checker (not used unless needed)
+			/*uint JRAddr = Gecko.peek(0x106E975C) + 0x92D8;
+			if (Gecko.peek(JRAddr) == 0x000003F2)
+			{
+			diff = JRAddr - 0x12CDADA0;
+			}
+			else
+			{
+			MessageBox.Show("Failed to find diff.");
+			statusLabel.Text = "Failed to find diff.";
+			Gecko.Disconnect();
+			return;
+			}*/            
+			connectBox.Enabled = false;
+			disconnectBox.Enabled = true;
 
-                Gecko.Disconnect();
-                return;
-            }            
-            connectBox.Enabled = false;
-            disconnectBox.Enabled = true;
-
-            release();
+			release();
 		}
-	    public void release()
+		public void release()
 		{
 			ipBox.Enabled = false;
 			connectBox.Enabled = false;
