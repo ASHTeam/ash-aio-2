@@ -104,67 +104,29 @@ namespace NewAshAIO
 				statusLabel.Text = "Failed to connect, invalid IP entered.";
 				return;
 			}
-			if (Gecko.peek(0x12CDADA0) == 0x000003F2)
-            {
-                diff = 0x0;
-            }
-            else if (Gecko.peek(0x12CE2DA0) == 0x000003F2)
-            {
-                diff = 0x8000;
-            }
-            else if (Gecko.peek(0x12CE3DA0) == 0x000003F2)
-            {
-                diff = 0x9000;
-            }
-            else
-            {
-                MessageBox.Show("Failed to find diff.");
-                statusLabel.Text = "Failed to find diff.";
+			//offset difference checker (not used unless needed)
+			/*uint JRAddr = Gecko.peek(0x106E975C) + 0x92D8;
+			if (Gecko.peek(JRAddr) == 0x000003F2)
+			{
+				diff = JRAddr - 0x12CDADA0;
+			}
+			else
+			{
+				MessageBox.Show("Failed to find diff.");
+				statusLabel.Text = "Failed to find diff.";
+				Gecko.Disconnect();
+				return;
+			}*/
+			connectBox.Enabled = false;
+			disconnectBox.Enabled = true;
 
-                Gecko.Disconnect();
-                return;
-            }            
-            connectBox.Enabled = false;
-            disconnectBox.Enabled = true;
-
-            release();
+			release();
 		}
-	    public void release()
+		public void release()
 		{
 			ipBox.Enabled = false;
 			connectBox.Enabled = false;
 			disconnectBox.Enabled = true;
-			bigInklingButton.Enabled = true;
-			darkInkButton.Enabled = true;
-			giantInklingButton.Enabled = true;
-			glowingStageButton.Enabled = true;
-			lightInkButton.Enabled = true;
-			makeEverythingBigButton.Enabled = true;
-			makeEverythingSmallButton.Enabled = true;
-			noInklingButton.Enabled = true;
-			smallInklingButton.Enabled = true;
-			transparentInklingButton.Enabled = true;
-			whiteBlindInkButton.Enabled = true;
-			stanceAngleButton.Enabled = true;
-			faceplantButton.Enabled = true;
-			glideButton.Enabled = true;
-			cinemaModeButton.Enabled = true;
-			tentacleModButton.Enabled = true;
-			alphaButton.Enabled = true;
-			apelingButton.Enabled = true;
-			noHeadButton.Enabled = true;
-			crazyTankButton.Enabled = true;
-			bigInvInklingButton.Enabled = true;
-			corruptTexButton.Enabled = true;
-			smoothTexButton.Enabled = true;
-			fromBeginningButton.Enabled = true;
-			wipFlyButton.Enabled = true;
-			sustainedJumpButton.Enabled = true;
-			speedButton.Enabled = true;
-			bounceWalkButton.Enabled = true;
-			bombBounceButton.Enabled = true;
-			deleteInklingButton.Enabled = true;
-			invisibilityTwoButton.Enabled = true;
 			revertButton.Enabled = true;
 			hackBrowser.Enabled = true;
 			moddedTCPGeckoClientToolStripMenuItem.Enabled = true;
@@ -174,37 +136,6 @@ namespace NewAshAIO
 			ipBox.Enabled = true;
 			connectBox.Enabled = true;
 			disconnectBox.Enabled = false;
-			bigInklingButton.Enabled = false;
-			darkInkButton.Enabled = false;
-			giantInklingButton.Enabled = false;
-			glowingStageButton.Enabled = false;
-			lightInkButton.Enabled = false;
-			makeEverythingBigButton.Enabled = false;
-			makeEverythingSmallButton.Enabled = false;
-			noInklingButton.Enabled = false;
-			smallInklingButton.Enabled = false;
-			transparentInklingButton.Enabled = false;
-			whiteBlindInkButton.Enabled = false;
-			stanceAngleButton.Enabled = false;
-			faceplantButton.Enabled = false;
-			glideButton.Enabled = false;
-			cinemaModeButton.Enabled = false;
-			tentacleModButton.Enabled = false;
-			alphaButton.Enabled = false;
-			apelingButton.Enabled = false;
-			noHeadButton.Enabled = false;
-			crazyTankButton.Enabled = false;
-			bigInvInklingButton.Enabled = false;
-			corruptTexButton.Enabled = false;
-			smoothTexButton.Enabled = false;
-			fromBeginningButton.Enabled = false;
-			wipFlyButton.Enabled = false;
-			sustainedJumpButton.Enabled = false;
-			speedButton.Enabled = false;
-			bounceWalkButton.Enabled = false;
-			bombBounceButton.Enabled = false;
-			deleteInklingButton.Enabled = false;
-			invisibilityTwoButton.Enabled = false;
 			revertButton.Enabled = false;
 			hackBrowser.Enabled = false;
 			moddedTCPGeckoClientToolStripMenuItem.Enabled = false;
@@ -564,6 +495,7 @@ namespace NewAshAIO
 	      	Gecko.poke(0x106CE0B8, 0xDF000000);
 	      	Gecko.poke(0x10699C30, 0xDF000000);
 	      	Gecko.poke(0x1067C9C4, 0xDF000000);
+	      	Gecko.poke(0x10667A24, 0xDF000000);
 	      	Gecko.poke(0x10665648, 0xDF000000);
 	      	Gecko.poke(0x1066403C, 0xDF000000);
 	      	Gecko.poke(0x1065AD60, 0xDF000000);
@@ -685,6 +617,22 @@ namespace NewAshAIO
 	      	statusLabel.Text = "Failed to poke ?NoInkling hack.";
 	      }
 		}
+
+        private void hideGUIButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Gecko.poke(0x10650778, 0x50000000);
+                Gecko.poke(0x10655644, 0x50000000);
+                Gecko.poke(0x106556E0, 0x50000000);
+                statusLabel.Text = "Hide GUI poked.";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Failed to poke hide GUI hack.");
+                statusLabel.Text = "Failed to poke hide GUI hack.";
+            }
+        }
 		// added all dangerous hacks
 		// now adding the tool strip menu items
 		void ExitToolStripMenuItemClick(object sender, EventArgs e)
@@ -748,16 +696,57 @@ namespace NewAshAIO
 		{
 			try
 			{
-				Gecko.poke(0x105EF2B0,0x3F800000);
-                Gecko.poke(0x106D37A8,0x3F800000);
-                Gecko.poke(0x10633774,0x3F800000);
-                Gecko.poke(0x106D3858,0x3F800000);
-                Gecko.poke(0x105EBE40,0x3F000000);
-                Gecko.poke(0x105EBE34,0x3F800000);
+                //GUI
+                Gecko.poke(0x10650778, 0x3F800000);
+                Gecko.poke(0x10655644, 0x3F800000);
+                Gecko.poke(0x106556E0, 0x3F800000);
+
+                //others
+                Gecko.poke(0x105EF2B0, 0x3F800000);
+                Gecko.poke(0x106D37A8, 0x3F800000);
+                Gecko.poke(0x10633774, 0x3F800000);
+                Gecko.poke(0x106D3858, 0x3F800000);
+                Gecko.poke(0x105EBE40, 0x3F000000);
+                Gecko.poke(0x105EBE34, 0x3F800000);
                 Gecko.poke(0x105EC944, 0x3F800000);
                 Gecko.poke(0x105ECA40, 0x3F000000);
                 Gecko.poke(0x105EEBC4, 0x3F000000);
                 Gecko.poke(0x105F14EC, 0x3F800000);
+                Gecko.poke(0x10509848, 0x3F800000);
+                Gecko.poke(0x105098DC, 0x3F000000);
+                Gecko.poke(0x1050590C, 0x3F800000);
+                Gecko.poke(0x10514254, 0x3F800000);
+                Gecko.poke(0x1050990C, 0x3F000000);
+                Gecko.poke(0x106E757C, 0x40800000);
+
+                //textures
+                Gecko.poke(0x106FA63C, 0xBF000000);
+                Gecko.poke(0x106DD694, 0xBF000000);
+                Gecko.poke(0x106DD4A8, 0xBF000000);
+                Gecko.poke(0x106DCB70, 0xBF000000);
+                Gecko.poke(0x106DC9F8, 0xBF000000);
+                Gecko.poke(0x106DC2DC, 0xBF000000);
+                Gecko.poke(0x106DBF68, 0xBF000000);
+                Gecko.poke(0x106DA588, 0xBF000000);
+                Gecko.poke(0x106D89AC, 0xBF000000);
+                Gecko.poke(0x106D7B48, 0xBF000000);
+                Gecko.poke(0x106D1DF8, 0xBF000000);
+                Gecko.poke(0x106D1DEC, 0xBF000000);
+                Gecko.poke(0x106D1DD4, 0xBF000000);
+                Gecko.poke(0x106D1924, 0xBF000000);
+                Gecko.poke(0x106CE0B8, 0xBF000000);
+                Gecko.poke(0x10699C30, 0xBF000000);
+                Gecko.poke(0x1067C9C4, 0xBF000000);
+                Gecko.poke(0x10667A24, 0xBF000000);
+                Gecko.poke(0x10665648, 0xBF000000);
+                Gecko.poke(0x1066403C, 0xBF000000);
+                Gecko.poke(0x1065AD60, 0xBF000000);
+                Gecko.poke(0x10655700, 0xBF000000);
+                Gecko.poke(0x1064F290, 0xBF000000);
+                Gecko.poke(0x106331D8, 0xBF000000);
+                Gecko.poke(0x1062D854, 0xBF000000);
+                Gecko.poke(0x10612818, 0xBF000000);
+
                 statusLabel.Text = "Revert hacks poked.";
 			}
 			catch (Exception)
