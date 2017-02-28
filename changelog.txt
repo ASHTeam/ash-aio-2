@@ -1,19 +1,8 @@
-Changelog for v2.0.0.1:
+Changelog for v2.0.0.2:
 
-- Added notepad
-- Added TCPGecko Client
-- Added new dropdown menu
-- Added "View my PC's IP address" button
-- Fixed changelog window to actually show the text of the changelog from GitHub in a richTextBox instead of using a webBrowser to view the changelog
-- Added warnings if you are running AshAIO in Development Mode (a mode where you have a version of AshAIO that is not available to the public yet)
-- Moved some links around
-- Renamed some dropdowns
-- Added status bar at the bottom, tells you the current status of the AIO
-- Info about hacks no longer opens your default web browser, instead it opens a seperate window in the AIO.
-- Removed "How to install AshAIO" because I wanted to
-- Added "Related projects" to view projects similar to AshAIO
-- All hacks are now in tabs instead of group boxes.
-- All buttons/labels/textboxes relating to TCPGecko Connection are in a group box at the top of the program
-- Fixed some bugs/typos
+- Disabled the diff checker until it is needed (it has also been updated using a pointer for maximum compatibility)
+- Updated the revert all hacks button
+- Added hide GUI hack (play matches without the GUI in the way)
+- cleaned up some codes
 
 Report any issues using the Report an issue button in the AIO or go to https://github.com/ASHTeam/ash-aio-2/issues/new
