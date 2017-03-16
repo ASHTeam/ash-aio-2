@@ -21,7 +21,7 @@ All in one tool containing hacks for Nintendo's Wii U game Splatoon found by the
 [![Join the ASH Team Discord!](https://discordapp.com/api/guilds/255896123229732864/widget.png?style=banner2)](https://discord.gg/Udz3BKf)
 
 ## What is this?
-This is a rewritten version of the old ASH AIO which was made in Python. This is made using C# and the [GeckoSharp](https://github.com/ASHTeam/GeckoSharp) library.
+This is a rewritten version of the old ASH AIO which was made in Python. This is made using C# and the [TCPGeckoSharp](https://github.com/ashteam/TCPGeckoSharp) library.
 
 ## How to get?
 View the [installation guide](https://github.com/ASHTeam/ash-aio-2/wiki/How-to-get-ASH-AIO)
