@@ -1,4 +1,8 @@
 <h1 align="center">
+    This project is dead and is no longer being actively developed.
+</h1>
+
+<h1 align="center">
    ASH-AIO
 </h1>
 All in one tool containing hacks for Nintendo's Wii U game Splatoon found by the Actual Splatoon Hacking Team.
