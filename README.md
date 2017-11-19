@@ -7,6 +7,10 @@
 </h1>
 All in one tool containing hacks for Nintendo's Wii U game Splatoon found by the Actual Splatoon Hacking Team.
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/SmWNfVhtnMoFQfCfjTKtsRWL/ASHTeam/ash-aio-2'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/SmWNfVhtnMoFQfCfjTKtsRWL/ASHTeam/ash-aio-2.svg' />
+</a>
+
 <h4 align="center">
    <a href="http://gbatemp.net/threads/release-ash-aio-an-all-in-one-splatoon-hacking-tool.461788/">View on GBATemp</a>
 </h4>
