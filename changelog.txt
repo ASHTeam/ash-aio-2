@@ -1,8 +1,5 @@
-Changelog for v2.0.0.2:
+Changelog for v2.0.0.3:
 
-- Disabled the diff checker until it is needed (it has also been updated using a pointer for maximum compatibility)
-- Updated the revert all hacks button
-- Added hide GUI hack (play matches without the GUI in the way)
-- cleaned up some codes
+- Patch security vulnerability related to open redirect/phishing.
 
 Report any issues using the Report an issue button in the AIO or go to https://github.com/ASHTeam/ash-aio-2/issues/new

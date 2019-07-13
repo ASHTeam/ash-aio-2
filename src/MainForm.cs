@@ -646,12 +646,12 @@ namespace NewAshAIO
 		}
 		void ViewHexexpecksSiteToolStripMenuItemClick(object sender, EventArgs e)
 		{
-			System.Diagnostics.Process.Start("http://hexexpeck.me");
+			System.Diagnostics.Process.Start("https://xdrixxyz.eu.org");
 			statusLabel.Text = "Opened Hexexpeck's site.";
 		}
 		void ViewASHTeamSiteToolStripMenuItemClick(object sender, EventArgs e)
 		{
-			System.Diagnostics.Process.Start("http://ashteam.ml");
+			System.Diagnostics.Process.Start("https://github.com/ASHTeam");
 			statusLabel.Text = "Opened ASH Team site.";
 		}
 		void JoinASHTeamDiscordToolStripMenuItemClick(object sender, EventArgs e)
